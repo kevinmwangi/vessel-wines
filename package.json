@@ -4,7 +4,7 @@
   "description": "shopping cart component",
   "main": "modules/ShoppingCart.jsx.js",
   "directories": {
-    "example": "examples"
+    "example": "app"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -41,8 +41,9 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "underscore": "^1.8.3",
-    "object-assign": "^4.0.1"
+    "classnames": "^2.2.5",
+    "object-assign": "^4.0.1",
+    "underscore": "^1.8.3"
   },
   "peerDependencies": {
     "react": "^0.13.3",

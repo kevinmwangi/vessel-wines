@@ -13,6 +13,6 @@ gulp.task('start', ["bundle"], function() {
 
 gulp.task('bundle', function() {
     // browserify('./app/UnstyledCart.jsx.js').transform(babelify).bundle().pipe(source('UnstyledCart.js')).pipe(gulp.dest('./app/build'));
-    browserify('./app/BootstrapCart.jsx.js').transform(babelify).bundle().pipe(source('BootstrapCart.js')).pipe(gulp.dest('./app/build'));
-    // browserify('./app/DragDropCart.jsx.js').transform(babelify).bundle().pipe(source('DragDropCart.js')).pipe(gulp.dest('./app/build'));
+    // browserify('./app/BootstrapCart.jsx.js').transform(babelify).bundle().pipe(source('BootstrapCart.js')).pipe(gulp.dest('./app/build'));
+    browserify('./app/DragDropCart.jsx.js').transform(babelify).bundle().pipe(source('DragDropCart.js')).pipe(gulp.dest('./app/build'));
 });
