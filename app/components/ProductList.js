@@ -1,6 +1,4 @@
 var React = require("react");
-// var MasonryInfiniteScroller = require("react-masonry-infinite");
-import MasonryInfiniteScroller from 'react-masonry-infinite';
 var Product = require("./Product");
 var _ = require('lodash');
 
