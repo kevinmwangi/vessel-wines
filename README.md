@@ -1,11 +1,11 @@
 React shopping cart
 ===================
 ## Getting Started
-Install Node, npm, gulp and nodemon
+Install node, npm, gulp and nodemon
 
 ## To Compile The App
 
-Navigate to the root folder of the application and return
+Navigate to the root folder of the application and run
 
 npm Install
 ```
