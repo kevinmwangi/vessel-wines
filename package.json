@@ -1,11 +1,10 @@
 {
-  "name": "shopping-cart",
-  "version": "0.1.0",
+  "name": "wineries",
+  "version": "1.0.0",
   "description": "shopping cart component",
-  "main": "modules/ShoppingCart.jsx.js",
-  "directories": {
-    "example": "app"
-  },
+  "author": "Kevin Mwangi <kevinnmwangi@gmail.com>",
+  "license": "ISC",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -13,45 +12,28 @@
     "type": "git",
     "url": "https://github.com/kevinmwangi/vessel-wines.git"
   },
-  "keywords": [
-    "react",
-    "react-component",
-    "cart",
-    "basket",
-    "shopping"
-  ],
-  "author": "Kevin Mwangi <kevinnmwangi@gmail.com>",
-  "license": "BSD3",
-  "bugs": {
-    "url": "https://github.com/kevinmwangi/vessel-wines.git"
+  "directories": {
+    "app": "app/dist"
   },
   "browserify": {
     "transform": [
       "babelify"
     ]
   },
-  "devDependencies": {
+  "dependencies": {
     "babelify": "^6.2.0",
-    "browserify": "^11.0.1",
+    "browserify": "^13.1.0",
     "express": "^4.14.0",
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.2.1",
-    "gulp-uglify": "^1.2.0",
-    "uglify": "^0.1.5",
+    "flux": "^3.0.0",
+    "guid": "0.0.12",
+    "keymirror": "^0.1.1",
+    "lodash": "^4.16.4",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "underscore": "^1.8.3",
     "vinyl-source-stream": "^1.1.0"
   },
-  "dependencies": {
-    "classnames": "^2.2.5",
-    "object-assign": "^4.0.1",
-    "underscore": "^1.8.3"
-  },
-  "peerDependencies": {
-    "react": "^0.13.3",
-    "flux": "^2.1.1",
-    "griddle-react": "^0.2.13",
-    "react-bootstrap": "^0.24.5",
-    "react-dnd": "^1.1.5",
-    "browserify": "^11.0.1",
-    "babelify": "^6.2.0"
+  "devDependencies": {
+    "gulp": "^3.9.1"
   }
 }

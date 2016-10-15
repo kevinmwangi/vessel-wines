@@ -1,18 +1,23 @@
-var gulp       = require('gulp');
+var gulp = require("gulp");
+var browserify = require("browserify");
 var babelify   = require('babelify');
-var browserify = require('browserify');
-var source     = require('vinyl-source-stream');
+var source = require("vinyl-source-stream");
 
-gulp.task('start', ["bundle"], function() {
-    browserify('./modules/ShoppingCart.jsx.js')
-    .transform(babelify)
-    .bundle()
-    .pipe(source('ShoppingCart.js'))
-    .pipe(gulp.dest('./dist'));
+gulp.task("bundle", function () {
+    return browserify({
+        entries: "./app/main.jsx",
+        debug: true
+    }).transform(babelify)
+        .bundle()
+        .pipe(source("main.js"))
+        .pipe(gulp.dest("app/dist"))
 });
 
-gulp.task('bundle', function() {
-    // browserify('./app/UnstyledCart.jsx.js').transform(babelify).bundle().pipe(source('UnstyledCart.js')).pipe(gulp.dest('./app/build'));
-    // browserify('./app/BootstrapCart.jsx.js').transform(babelify).bundle().pipe(source('BootstrapCart.js')).pipe(gulp.dest('./app/build'));
-    browserify('./app/DragDropCart.jsx.js').transform(babelify).bundle().pipe(source('DragDropCart.js')).pipe(gulp.dest('./app/build'));
+gulp.task("copy", ["bundle"], function () {
+    return gulp.src(["app/index.html","app/lib/bootstrap-css/css/bootstrap.min.css","app/style.css"])
+        .pipe(gulp.dest("app/dist"));
+});
+
+gulp.task("start",["copy"],function(){
+   console.log("Gulp completed...");
 });
