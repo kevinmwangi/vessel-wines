@@ -7,18 +7,19 @@ Install node, npm, gulp and nodemon
 
 Navigate to the root folder of the application and run
 
+```
 npm Install
 ```
 This will install node modules
 
 then
-
+```
 gulp start
 ```
 This will compile the app
 
 Then Start the server by running
-
+```
 nodemon ./server/server.js
 ```
 
